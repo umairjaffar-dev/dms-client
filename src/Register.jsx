@@ -40,7 +40,7 @@ const Register = () => {
     try {
       const response = await fetch(`${BASE_URL}/user/register`, {
         method: "POST",
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, otp: "1234" }),
         headers: {
           "Content-Type": "application/json",
         },
